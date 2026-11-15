@@ -2,6 +2,24 @@
 <html>
 
     <head>
+        <style>
+
+            .transition-button {background-color:forestgreen; padding: 20px; border: none; cursor: pointer; transition: background-color 0.5s ease;}
+            .transition-button:hover {background-color:darkseagreen;}
+
+            .animation-box {width: 50px; height: 50px; background-color: seagreen; position: relative; animation: move 2s infinite alternate;}
+            @keyframes move {from {left: 0;}to{left: 100px;}}
+
+            .pseudo-list li:nth-child(odd) {background-color: rgb(134, 130, 130);}
+            .pseudo-list li:nth-child(even) {background-color: olivedrab;}
+
+            .filter-image {filter: sepia(100%); transition: filter 0.8s ease;}
+            .filter-image:hover {filter: sepia(5%);}
+
+            .quote {position: relative; padding-left: 30px; font-style:italic; font-size: 30px;}
+            .quote::before {content: '“'; font-size: 40px; position: absolute; left: 0; top: 0; color:antiquewhite;}
+
+        </style>
         <link rel="stylesheet" href="styling.css">
         <title>My First HTML Page Since Lower Secondary School</title>
        
@@ -56,6 +74,35 @@
             <h3>Hauki on kala</h3>
             <p>Sinivalas ei ole.</p>
         </div>
+
+        <br>
+
+        <button class="transition-button">Hover me</button>
+
+        <br>
+        <br>
+        
+        <div class="animation-box"></div>
+
+        <br>
+        <br>
+
+        <ul class="pseudo-list">
+        <li>Kissa</li>
+        <li>Koira</li>
+        <li>Vesinokkaelin</li>
+        <li>Yksisarvinen</li>
+        </ul>
+
+        <br>
+        <br>
+
+        <img src="picspics/normimaanantai.jpg" alt="Sample Image" class="filter-image">
+
+        <br>
+        <br>
+
+        <blockquote class="quote">Semmosta se on.</blockquote>
 
     </body>
 </html>
